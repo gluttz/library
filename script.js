@@ -8,19 +8,19 @@ let myLibrary = [
 const form = document.querySelector('#formField')
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const newBook = new FormData(form);
-    const Obj = Object.fromEntries(newBook);
-    const json = JSON.stringify(Obj);
-    localStorage.setItem('form', json);
-    const newLib = new Book(form);
-    console.log(newLib)
+    const newSubmit = new FormData(form);
+    const Obj = Object.fromEntries(newSubmit);
+    const newBook = new Book(Obj)
+    console.log(Obj);
+    console.log(newBook);
+
 });
 
-function Book(title,author,pages,read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+function Book(...args){
+    this.title = args.title;
+    this.author = args.author;
+    this.pages = args.pages;
+    this.read = args.read;
 }
 Book.prototype.info = function(){
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
