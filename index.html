@@ -10,6 +10,32 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="container">
     
+        <button class="open-button" onclick="openForm()">Add Book</button>
+        <div class="form-popup" id="myform">
+            <form class="form-container" id="formField">
+                <h1>New Book</h1>
+                
+                <label for="title" class="text-label">Title</label>
+                <input type="text" name="title" id="title" required>
+                
+                <label for="author" class="text-label">Author</label>
+                <input type="text" name="author" id="author" required>
+                
+                <div class="pages-container bottom-container">
+                    <label for="pages" class="text-label">Pages</label>
+                    <input type="number" name="pages" id="pages">
+                </div>
+                <div class="read-container bottom-container" class="text-label">
+                    <label for="read" class="text-label">Read</label>
+                    <input type="checkbox" name="read" id="read">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>
