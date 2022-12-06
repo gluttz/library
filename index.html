@@ -11,8 +11,36 @@
 </head>
 <body>
     <div id="container">
-    
-        <button class="open-button" onclick="openForm()">Add Book</button>
+        
+        <div id="header-container">
+            <h1>Library</h1>
+            <button type="button">Sign In</button>
+        </div>
+        <div id="card-container">            
+            <button class="open-button" onclick="openForm()">+</button>
+
+        </div>
+        <div id="sidebar-container">
+            <h2>Information</h2>
+            <div id="info-container">
+                <div class="books">
+                    <span>Books</span>
+                    <span>0</span>
+                </div>
+                <div class="completed-books">
+                    <span>Completed Books</span>
+                    <span>0</span>
+                </div>
+                <div class="total-pages">
+                    <span>Total Pages</span>
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        
         <div class="form-popup" id="myform">
             <form class="form-container" id="formField">
                 <h1>New Book</h1>
